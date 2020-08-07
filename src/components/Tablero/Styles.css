@@ -1,0 +1,53 @@
+.juego {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 600px;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.ficha {
+    width: 106px;
+    height: 106px;
+}
+
+.frente {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 32, 80);
+    border-radius: 20px;
+    border: 8px solid rgb(0, 12, 40);
+    color: rgb(0, 12, 40);
+    cursor: pointer;
+}    
+
+.figura {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;    
+    background-color: rgb(125, 255, 255);
+    border: 8px solid rgb(64, 200, 255);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.adivinada {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;    
+    background-color: rgb(60, 66, 78);
+    border: 8px solid rgb(20, 22, 26);
+    color: rgb(20, 44, 26);
+    border-radius: 20px;
+    cursor: pointer;   
+}

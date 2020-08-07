@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { GameContext } from '../context/GameContext'
-import '../App.css'
+import './Styles.css'
 
 export default function Encabezado() {
     
