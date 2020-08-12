@@ -16,6 +16,8 @@
     width: 90px;
     height: 90px;
     display: flex;
+    text-shadow: 6px 6px 8px rgb(0, 64, 160);
+    box-shadow: 6px 6px 12px rgb(124, 124, 124);
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 32, 80);
@@ -29,11 +31,14 @@
     width: 78px;
     height: 78px;
     display: flex;
+    color: rgb(0, 16, 40);
+    text-shadow: 6px 6px 12px rgb(0, 8, 20);
+    box-shadow: 6px 6px 12px rgb(124, 124, 124);
     padding: 6px;
     justify-content: center;
     align-items: center;    
-    background-color: rgb(125, 255, 255);
-    border: 8px solid rgb(64, 200, 255);
+    background-color: rgb(180, 255, 255);
+    border: 8px solid rgb(48, 150, 210);
     border-radius: 20px;
     cursor: pointer;
 }
@@ -44,10 +49,13 @@
     display: flex;
     padding: 6px;
     justify-content: center;
-    align-items: center;    
-    background-color: rgb(60, 66, 78);
-    border: 8px solid rgb(20, 22, 26);
-    color: rgb(20, 44, 26);
+    align-items: center;
+    background-color: rgb(45, 180, 90);
+    border: 8px solid rgb(24, 90, 45);
+    color: rgb(255, 255, 255);
+    text-shadow: 6px 6px 12px rgb(45, 255, 90);
+    box-shadow: 6px 6px 12px rgb(124, 124, 124);
+    opacity: 0.45;
     border-radius: 20px;
     cursor: pointer;   
 }
