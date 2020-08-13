@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { GameContext } from '../../context/GameContext'
+import { GameContext } from '../../../context/GameContext'
 import './Styles.css'
 
 
-export default function Start() {
+export const Start = () => {
     
     let { armaJuego } = useContext(GameContext)
 

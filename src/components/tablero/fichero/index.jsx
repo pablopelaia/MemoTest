@@ -1,6 +1,6 @@
 import React from 'react'
 import './Styles.css'
-import Ficha from './Ficha'
+import Ficha from '../ficha'
 
 export const Fichero = () => {
     

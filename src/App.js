@@ -2,8 +2,7 @@ import React from 'react'
 import './App.css'
 
 import { GameProvider } from './context/GameContext'
-import Start from './pages/main'
-import ElJuego from './pages/principal'
+import ElJuego from './components/pages/principal'
 
 export default function App() {
   

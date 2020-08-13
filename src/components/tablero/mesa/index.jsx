@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react'
 import './Styles.css'
+import { Fichero } from '../fichero'
 
-export default function Encabezado() {
+export const Tablero = () => {
     
     // let { fichero, armaJuego } = useContext()
     // let intentos = fichero.intentos
@@ -20,18 +21,19 @@ export default function Encabezado() {
     }
 
     return (
-        <header>
-            <div className="titulo">
-                MemoTest
+        <div className="principal">
+            <div className="fichas">
+                <Fichero />
             </div>
-            <div>
+            <div className="elementos">
+                <hr className="separador"/>
+                <h1 className="intentos">0</h1>
+                <h1 className="subtitulo">Intentos</h1>
                 <button className="reiniciar" onClick={handleClick}>
                     Reiniciar
                 </button>
-            </div>
-            <div className="subtitulo">
-                Intentos: <span>0</span>
-            </div>
-    </header>
+                <h1 className="titulo">MemoTest</h1>
+            </div>            
+        </div>
     )
 }
