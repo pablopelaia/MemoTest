@@ -12,7 +12,7 @@ export const Start = () => {
             <button onClick={armaJuego}  className="Start">
                 Start
             </button> 
-            <h1 className="inicio">MemoTest</h1>
+            <h1 className="memo-inicio">MemoTest</h1>
         </div>
     )
 }

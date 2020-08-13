@@ -27,12 +27,13 @@ export const Tablero = () => {
             </div>
             <div className="elementos">
                 <hr className="separador"/>
-                <h1 className="intentos">0</h1>
-                <h1 className="subtitulo">Intentos</h1>
+                <h1 className="contador">
+                    Intentos <span>0</span>
+                </h1>
                 <button className="reiniciar" onClick={handleClick}>
                     Reiniciar
                 </button>
-                <h1 className="titulo">MemoTest</h1>
+                <h1 className="memo-tablero">MemoTest</h1>
             </div>            
         </div>
     )
