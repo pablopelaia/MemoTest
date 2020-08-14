@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import './Styles.css'
 import { Fichero } from '../fichero'
 import { GameContext } from '../../../context/GameContext'
-import { Loading } from '../../pages/loading'
 
 export const Tablero = () => {
     
@@ -14,13 +13,11 @@ export const Tablero = () => {
 
 
     const handleClick = () => {
+        
         const res=window.confirm('Desea iniciar una nueva partida')
         
-        if(res){
-            setTimeout(() => {
-                reiniciaJuego()
-                return <Loading />
-            }, 500);
+        if(res) {
+            reiniciaJuego()
         }
 
         return

@@ -13,7 +13,8 @@ function GameProvider({ children }) {
     function armaJuego() {
         const misFichas= armaFichero()
         fichero = {
-            memoTest:"Jugar",
+            memoTest:"Cargando",
+            cargar:"Jugar",
             fichas: misFichas,
             fichasSeleccionadas: [],
             estaComprobando: false,
@@ -42,30 +43,33 @@ function GameProvider({ children }) {
     }
 
     function reiniciaJuego() {
-        fichero = {
-            memoTest:"Terminado",
-            fichas: {},
-            fichasSeleccionadas: [],
-            estaComprobando: false,
-            intentos: 0
+        const resetFichero = {
+            ...fichero,
+            memoTest:"Cargando",
+            cargar:"Terminado"
         }
-        setFichero(fichero)
+        setFichero(resetFichero)
     }
 
     function juegoFinalizado() {
-        fichero = {
-            memoTest:"Start",
-            fichas: {},
-            fichasSeleccionadas: [],
-            estaComprobando: false,
-            intentos: 0
+        const finPartida = {
+            ...fichero,
+            memoTest:"Cargando",
+            cargar:"Start"
         }
-        setFichero(fichero)
+        setFichero(finPartida)
     }
 
+    function cargarPagina(){
+        const miRender = {
+            ...fichero,
+            memoTest: fichero.cargar
+        }
+        setFichero(miRender)
+    }
 
     return (
-        <Provider value={{fichero, armaJuego, reiniciaJuego, juegoFinalizado}}>
+        <Provider value={{fichero, armaJuego, reiniciaJuego, juegoFinalizado, cargarPagina}}>
             {children}
         </Provider>
     )

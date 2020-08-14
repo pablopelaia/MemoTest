@@ -1,20 +1,12 @@
 import React, { useContext } from 'react'
 import { GameContext } from '../../../context/GameContext'
 import './Styles.css'
-import { Loading } from '../loading'
 
 export const Start = () => {
     
     const { armaJuego } = useContext(GameContext)
     
-    const handleClick = () => {
-
-        let cargar
-        setTimeout(() => {
-            armaJuego()
-            return <Loading renderizar={"Start"}/>
-        }, 500);        
-    }
+    const handleClick = () => armaJuego()
 
     return (
         <div>
