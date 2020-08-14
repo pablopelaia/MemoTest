@@ -4,6 +4,7 @@ import { Start } from '../start'
 import { Tablero} from '../../tablero/mesa'
 import { Ganaste } from '../end'
 import { Loading } from '../loading'
+import { Reset } from '../reset'
 
 export const ElJuego = () => {
 
@@ -13,14 +14,17 @@ export const ElJuego = () => {
         case "Start":
             return <Start />
         
-        case "Jugar":
+        case "Play":
             return <Tablero />
         
-        case "Terminado":
+        case "Finish":
             return <Ganaste />
 
-        case "Cargando":
+        case "Loading":
             return <Loading />
+        
+        case "Reset":
+            return <Reset />
         
         default:
             return <Start />

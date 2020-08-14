@@ -13,8 +13,8 @@ function GameProvider({ children }) {
     function armaJuego() {
         const misFichas= armaFichero()
         fichero = {
-            memoTest:"Cargando",
-            cargar:"Jugar",
+            memoTest:"Loading",
+            cargar:"Play",
             fichas: misFichas,
             fichasSeleccionadas: [],
             estaComprobando: false,
@@ -45,8 +45,7 @@ function GameProvider({ children }) {
     function reiniciaJuego() {
         const resetFichero = {
             ...fichero,
-            memoTest:"Cargando",
-            cargar:"Terminado"
+            memoTest:"Reset"
         }
         setFichero(resetFichero)
     }

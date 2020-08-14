@@ -6,12 +6,7 @@ import { GameContext } from '../../../context/GameContext'
 export const Tablero = () => {
     
     const { reiniciaJuego } = useContext(GameContext)
-    // let { fichero, armaJuego } = useContext()
-    // let intentos = fichero.intentos
     
-    // const [miFichero, setMifichero] = useState(armaJuego())
-
-
     const handleClick = () => {
         
         const res=window.confirm('Desea iniciar una nueva partida')
