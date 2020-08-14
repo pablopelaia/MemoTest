@@ -1,15 +1,24 @@
 import React, { useContext } from 'react'
 import { GameContext } from '../../../context/GameContext'
 import './Styles.css'
-
+import { Loading } from '../loading'
 
 export const Start = () => {
     
-    let { armaJuego } = useContext(GameContext)
+    const { armaJuego } = useContext(GameContext)
+    
+    const handleClick = () => {
+
+        let cargar
+        setTimeout(() => {
+            armaJuego()
+            return <Loading renderizar={"Start"}/>
+        }, 500);        
+    }
 
     return (
         <div>
-            <button onClick={armaJuego}  className="Start">
+            <button onClick={handleClick}  className="Start">
                 Start
             </button> 
             <h1 className="memo-inicio">MemoTest</h1>

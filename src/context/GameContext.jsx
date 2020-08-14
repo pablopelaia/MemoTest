@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import mezclar from 'lodash.shuffle'
-
 import { MiFiguras } from './images'
 
 let GameContext = React.createContext()
 let { Provider, Consumer } = GameContext
 
+
 function GameProvider({ children }) {
     
-    
     let [fichero, setFichero] = useState({})
-  
+   
     function armaJuego() {
         const misFichas= armaFichero()
         fichero = {
+            memoTest:"Jugar",
             fichas: misFichas,
             fichasSeleccionadas: [],
             estaComprobando: false,
@@ -41,9 +41,31 @@ function GameProvider({ children }) {
         return mezclar(fichas)
     }
 
+    function reiniciaJuego() {
+        fichero = {
+            memoTest:"Terminado",
+            fichas: {},
+            fichasSeleccionadas: [],
+            estaComprobando: false,
+            intentos: 0
+        }
+        setFichero(fichero)
+    }
+
+    function juegoFinalizado() {
+        fichero = {
+            memoTest:"Start",
+            fichas: {},
+            fichasSeleccionadas: [],
+            estaComprobando: false,
+            intentos: 0
+        }
+        setFichero(fichero)
+    }
+
 
     return (
-        <Provider value={{fichero, armaJuego}}>
+        <Provider value={{fichero, armaJuego, reiniciaJuego, juegoFinalizado}}>
             {children}
         </Provider>
     )

@@ -1,9 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import './Styles.css'
 import { Fichero } from '../fichero'
+import { GameContext } from '../../../context/GameContext'
+import { Loading } from '../../pages/loading'
 
 export const Tablero = () => {
     
+    const { reiniciaJuego } = useContext(GameContext)
     // let { fichero, armaJuego } = useContext()
     // let intentos = fichero.intentos
     
@@ -14,7 +17,10 @@ export const Tablero = () => {
         const res=window.confirm('Desea iniciar una nueva partida')
         
         if(res){
-            return alert('armaJuego()')
+            setTimeout(() => {
+                reiniciaJuego()
+                return <Loading />
+            }, 500);
         }
 
         return

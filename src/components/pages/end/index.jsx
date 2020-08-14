@@ -1,23 +1,31 @@
-import React, { useContext } from 'react'
+import React, { useContext, Fragment } from 'react'
 import { GameContext } from '../../../context/GameContext'
 import './Styles.css'
+import { Loading } from '../loading'
 
 
 export const Ganaste = () => {
     
-    let { armaJuego } = useContext(GameContext)
+    let { juegoFinalizado } = useContext(GameContext)
+    
+    const handleClick = () => {
+        setTimeout(() => {
+            juegoFinalizado()
+            return <Loading />
+        }, 500);
+    }
 
     return (
-        <div>
+        <Fragment>
             <h1 className="ganar">
                 ¡¡¡ Feliciataciones Ganaste en <samp className="intentos">30</samp> intentos !!!
             </h1>
             <h1 className="memo-fin">
                 MemoTest
             </h1>
-            <button onClick={armaJuego}  className="jugar">
+            <button onClick={handleClick()}  className="jugar">
                 Nuevo juego
             </button>            
-        </div>
+        </Fragment>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 
 import { GameProvider } from './context/GameContext'
-import ElJuego from './components/pages/principal'
+import { ElJuego } from './components/pages/principal'
 
 export default function App() {
   
