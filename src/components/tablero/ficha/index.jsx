@@ -1,19 +1,20 @@
 import React from 'react'
 import './Styles.css'
+import { GameContext } from '../../../context/GameContext'
+import { useContext } from 'react'
 
-export const Ficha = () => {
-    
-    // let figura = 'fa-beer'
-    // let adivinada = false
+export const Ficha = ({ ficha }) => {
+      
+    const { figura, fueAdivinada, estaCliqueda } = ficha
 
     return(
         <div className="ficha">
-            <div>
-                <i className={'frente fa fa-drupal fa-5x'} />
-            </div>
             {/* <div>
-                <i className={`${adivinada ? 'adivinada' : 'figura'} fa ${figura} fa-4x`} />
+                <i className={'frente fa fa-drupal fa-5x'} />
             </div> */}
+            <div>
+                <i className={`${fueAdivinada ? 'adivinada' : 'figura'} fa ${figura} fa-4x`} />
+            </div>
         </div>
     )
 }

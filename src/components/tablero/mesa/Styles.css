@@ -3,8 +3,8 @@
 }
 
 .separador {
-  margin-right: 60px;
-  margin-left: -60px;
+  margin-left: 90px;
+  margin-right: 24px;
   width: 10px;
   height: 100%;
   background-color: rgb(75, 76, 76);
@@ -15,8 +15,8 @@
 
 .fichas {
   position: relative;
-  margin-left: 125px;
-  margin-right: 115px;
+  margin-left: 24px;
+  margin-right: 224px;
 }
 
 .elementos {
@@ -32,14 +32,14 @@
 
 .contador {
   position: absolute;
-  font-size: 22px;
+  font-size: 24px;
   padding: 6px;
   text-align: center;
   color:rgb(255, 255, 255);
   border: 2px rgb(8, 147, 112);
   box-shadow: 2px 2px 12px rgb(0, 255, 255);
-  margin: 96px;
-  margin-top: 36px;
+  margin: 178px;
+  margin-top: 20px;
 }
 
 span {
@@ -50,7 +50,7 @@ span {
 .memo-tablero {
   position: absolute;
   writing-mode: vertical-rl;
-  margin: 90px;
+  margin: 150px;
   margin-top: 12%;
   font-size: 90px;
   padding: 12px;
@@ -71,9 +71,9 @@ span {
   color: rgb(255, 255, 255);
   opacity: 0.4;
   border: 2px rgb(8, 147, 112);
-  box-shadow: 0px 0px 8px rgb(255, 20, 20);
+  box-shadow: 0px 0px 10px rgb(255, 20, 20);
   padding: 5px;
   border-radius: 10%;
-  margin: 98px;
-  margin-top: 110px;
+  margin: 210px;
+  margin-top: 118px;
 }

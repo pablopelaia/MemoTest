@@ -25,7 +25,7 @@ function GameProvider({ children }) {
 
     function armaFichero(){
 
-        const NUMERO_DE_FICHAS = 30
+        const NUMERO_DE_FICHAS = 40
         let fichas = []
         const MIS_FIGURAS = MiFiguras()
 

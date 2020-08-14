@@ -10,6 +10,7 @@
 .ficha {
     width: 106px;
     height: 106px;
+    margin: 10px;
 }
 
 .frente {
@@ -50,10 +51,10 @@
     padding: 6px;
     justify-content: center;
     align-items: center;
-    background-color: rgb(45, 180, 90);
-    border: 8px solid rgb(24, 90, 45);
-    color: rgb(255, 255, 255);
-    text-shadow: 6px 6px 12px rgb(45, 255, 90);
+    background-color: rgb(100, 255, 200);
+    border: 8px solid rgb(0, 60, 24);
+    color: rgb(0, 80, 32);
+    text-shadow: 6px 6px 12px rgb(0, 20, 8);
     box-shadow: 6px 6px 12px rgb(124, 124, 124);
     opacity: 0.45;
     border-radius: 20px;
