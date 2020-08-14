@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './Styles.css'
-import Ficha from '../ficha'
+import { Ficha } from '../ficha'
 import { GameContext } from '../../../context/GameContext'
 
 export const Fichero = () => {

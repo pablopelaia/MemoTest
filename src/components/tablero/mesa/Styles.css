@@ -17,6 +17,7 @@
   position: relative;
   margin-left: 24px;
   margin-right: 224px;
+  top: -10px
 }
 
 .elementos {
@@ -38,7 +39,7 @@
   color:rgb(255, 255, 255);
   border: 2px rgb(8, 147, 112);
   box-shadow: 2px 2px 12px rgb(0, 255, 255);
-  margin: 178px;
+  margin: 150px;
   margin-top: 20px;
 }
 
@@ -51,8 +52,8 @@ span {
   position: absolute;
   writing-mode: vertical-rl;
   margin: 150px;
-  margin-top: 12%;
-  font-size: 90px;
+  margin-top: 14%;
+  font-size: 80px;
   padding: 12px;
   text-align: center;
   color:rgb(8, 147, 112);
@@ -66,7 +67,7 @@ span {
   outline: none;
   cursor: pointer;
   background: rgb(0, 18, 14);
-  font-size: 18px;
+  font-size: 24px;
   font: bolder;
   color: rgb(255, 255, 255);
   opacity: 0.4;
@@ -74,6 +75,6 @@ span {
   box-shadow: 0px 0px 10px rgb(255, 20, 20);
   padding: 5px;
   border-radius: 10%;
-  margin: 210px;
-  margin-top: 118px;
+  margin: 160px;
+  margin-top: 130px;
 }
