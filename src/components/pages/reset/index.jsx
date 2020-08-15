@@ -9,7 +9,7 @@ export const Reset = () => {
     const handleClick = () => {        
         setTimeout(() => {
             armaJuego()
-        }, 2000);        
+        }, 1200);        
     }
 
     return (

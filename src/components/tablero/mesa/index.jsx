@@ -5,7 +5,7 @@ import { GameContext } from '../../../context/GameContext'
 
 export const Tablero = () => {
     
-    const { reiniciaJuego } = useContext(GameContext)
+    const { fichero, reiniciaJuego } = useContext(GameContext)
     
     const handleClick = () => {
         
@@ -26,7 +26,7 @@ export const Tablero = () => {
             <div className="elementos">
                 <hr className="separador"/>
                 <h1 className="contador">
-                    Intentos <span>0</span>
+                    Intentos <span>{fichero.intentos}</span>
                 </h1>
                 <button className="reiniciar" onClick={handleClick}>
                     Reiniciar

@@ -9,9 +9,9 @@ export const Fichero = () => {
 
     return (
         <div className="juego">
-            {fichero.fichas.map((ficha, index) => (
+            {fichero.fichas.map((ficha) => (
                 <Ficha
-                key={index}
+                key={ficha.id}
                 ficha={ficha}
                 />
             ))}

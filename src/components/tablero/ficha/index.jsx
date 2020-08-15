@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GameContext } from '../../../context/GameContext'
 import './Styles.css'
 import Flip from 'react-card-flip'
-import { GameContext } from '../../../context/GameContext'
-import { useContext } from 'react'
-import { useState } from 'react'
 
 export const Ficha = ({ ficha }) => {
       
-    const { figura, fueAdivinada, estaCliqueda } = ficha
-    const [click, setClick] = useState(estaCliqueda)
-
-    const handleClick = () => setClick(!click)
+    const { fichero, hacerClick, compararSeleccionadas, verificaFinaDelJuego } = useContext(GameContext)
+    const { id, figura, fueAdivinada, estaCliqueda } = ficha
+    
+    const handleClick = () => {
+        hacerClick(id)
+                
+        if(fichero.fichasSeleccionadas.lenght===2){
+            compararSeleccionadas()
+            verificaFinaDelJuego()
+        }
+    }
     
     return(
         <div className="ficha">
-            <Flip isFlipped={click} flipDirection="horizontal">
+            <Flip isFlipped={estaCliqueda} flipDirection="horizontal">
                 <div>
                     <i
                     className={'frente fa fa-drupal fa-5x'}
@@ -24,7 +29,6 @@ export const Ficha = ({ ficha }) => {
                 <div>
                     <i
                     className={`${fueAdivinada ? 'adivinada' : 'figura'} fa ${figura} fa-4x`}
-                    onClick={handleClick}
                     />
                 </div>
             </Flip>
