@@ -17,7 +17,8 @@ function GameProvider({ children }) {
             cargar:"Play",
             fichas: misFichas,
             fichasSeleccionadas: [],
-            intentos: 0
+            intentos: 0,
+            estaVerificando: false
         }
         setFichero(fichero)
     }
@@ -50,7 +51,7 @@ function GameProvider({ children }) {
         
         let miFicha = fichero.fichas.filter(f => f.id === fichaID)[0]
 
-        if (miFicha.fueAdivinada || miFicha.estaCliqueda) {
+        if (fichero.estaVerificando || miFicha.estaCliqueda) {
             return
         }
 
@@ -63,16 +64,19 @@ function GameProvider({ children }) {
             }
             return f
         })
-        
+
+        const verifica = actualSeleccionadas.length === 2
+
         const actualFichero = {
             ...fichero,
             fichas: actualesFichas,
-            fichasSeleccionadas: actualSeleccionadas
+            fichasSeleccionadas: actualSeleccionadas,
+            estaVerificando: verifica
         }
 
         setFichero(actualFichero)
 
-        if (actualSeleccionadas.length === 2) {
+        if (verifica) {
             compararSeleccionadas(actualFichero)
         }
     }
@@ -99,7 +103,8 @@ function GameProvider({ children }) {
                 ...actualFichero,
                 fichas: actualesFichas,
                 fichasSeleccionadas: [],
-                intentos: actualFichero.intentos + 1
+                intentos: actualFichero.intentos + 1,
+                estaVerificando: false
             }
             
             setFichero(nuevoFichero)

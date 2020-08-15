@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './Styles.css'
-import { Fichero } from '../fichero'
-import { GameContext } from '../../../context/GameContext'
+import { Fichero } from './Fichero'
+import { GameContext } from '../../context/GameContext'
 
 export const Tablero = () => {
     

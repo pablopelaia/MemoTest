@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
-import { GameContext } from '../../../context/GameContext'
-import { Start } from '../start'
-import { Tablero} from '../../tablero/mesa'
-import { Ganaste } from '../end'
-import { Loading } from '../loading'
-import { Reset } from '../reset'
+import { GameContext } from '../../context/GameContext'
+import { Start } from './Start'
+import { Tablero} from '../board/index'
+import { Finish } from './Finish'
+import { Loading } from './Loading'
+import { Reset } from './Reset'
 
 export const ElJuego = () => {
 
@@ -18,7 +18,7 @@ export const ElJuego = () => {
             return <Tablero />
         
         case "Finish":
-            return <Ganaste />
+            return <Finish />
 
         case "Loading":
             return <Loading />

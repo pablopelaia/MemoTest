@@ -1,8 +1,8 @@
 import React, { useContext, Fragment } from 'react'
-import { GameContext } from '../../../context/GameContext'
+import { GameContext } from '../../context/GameContext'
 import './Styles.css'
 
-export const Ganaste = () => {
+export const Finish = () => {
     
     let { fichero, juegoFinalizado } = useContext(GameContext)
     
@@ -10,13 +10,13 @@ export const Ganaste = () => {
 
     return (
         <Fragment>
-            <h1 className="ganar">
-                ¡¡¡ Feliciataciones Ganaste en <samp className="intentos">{fichero.intentos - 1}</samp> intentos !!!
+            <h1 className="win">
+                ¡¡¡ Feliciataciones Ganaste en <samp className="attempts">{fichero.intentos - 1}</samp> intentos !!!
             </h1>
-            <h1 className="memo-fin">
+            <h1 className="title end">
                 MemoTest
             </h1>
-            <button onClick={handleClick}  className="jugar">
+            <button onClick={handleClick}  className="click new">
                 Nuevo juego
             </button>            
         </Fragment>

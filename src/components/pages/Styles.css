@@ -1,0 +1,158 @@
+/* TITULOS */
+
+.title {
+  position: absolute;
+  text-align: center;
+  font-size: 220px;
+  color:rgb(8, 147, 112);
+  padding: 12px;
+  border: solid 6px rgb(8, 147, 112);
+  margin: 145px;
+}
+
+.memo-test {
+  font-size: 120px;
+  text-shadow: 2px 2px 6px rgb(4, 72, 56);
+  margin: 300px;
+  box-shadow: 2px 2px 6px rgb(4, 72, 56); 
+}
+
+.load {
+  text-shadow: 6px 6px 12px rgb(4, 72, 56);
+  margin-top: 300px;
+  box-shadow: 6px 6px 16px rgb(0, 255, 255);
+  opacity: 0.4;  
+}
+
+.reset {  
+  text-shadow: 6px 6px 12px rgb(56, 0, 0);
+  margin-top: 300px;
+  box-shadow: 6px 6px 16px rgb(255, 0, 0);  
+  opacity: 0.4;  
+}
+
+.end {
+  font-size: 200px;
+  text-shadow: 2px 2px 6px rgb(4, 72, 56);
+  margin-top: 300px;
+  box-shadow: 2px 2px 6px rgb(4, 72, 56);
+  opacity: 0.1;
+}
+
+
+/* SUBTITULOS */
+
+.subtitle {
+  position: absolute;
+  text-align: center;
+  padding: 16px;
+  margin: 280px;
+  margin-left: 300px;
+  margin-top: 120px;
+  opacity: 0.6;
+}
+
+.loading {
+  font-size: 90px;
+  color:rgb(255, 255, 255);
+  text-shadow: 6px 6px 16px rgb(2, 36, 28);
+  border: 2px rgb(8, 147, 112);
+  box-shadow: 6px 6px 16px rgb(0, 255, 255);
+}
+
+samp {
+  font-size: 80px;
+  opacity: 1;
+}
+
+.updating {
+  color:rgb(0, 255, 255);
+}
+
+.refresh {
+  font-size: 50px;
+  color:rgb(255, 0, 0);
+  text-shadow: 6px 6px 16px rgb(28, 0, 0);
+  border: 2px rgb(112, 0, 0);
+  box-shadow: 6px 6px 16px rgb(112, 0, 0);
+}
+
+.wait {
+  color:rgb(255, 0, 0);
+}
+
+.win {
+  position: absolute;
+  text-align: center;
+  font-size: 60px;
+  color:rgb(255, 255, 255);
+  text-shadow: 4px 4px 16px rgb(2, 36, 28);
+  border: 2px rgb(8, 147, 112);
+  padding: 16px;
+  margin: 20px;
+  margin-top: 120px;
+  box-shadow: 2px 2px 16px rgb(0, 255, 255);
+}
+
+.attempts {
+  position: relative;
+  font-size: 96px;
+  color:rgb(0, 255, 255);
+  margin: 0;  
+}
+
+/* BOTOTES */
+
+.click {
+  position: absolute;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  border-radius: 20%;
+  color: rgb(255, 255, 255);
+  padding: 8px;
+}
+
+.start {
+  font-size: 96px;
+  border: 2px rgb(8, 147, 112);
+  margin: 500px;
+  margin-top: 120px;
+  box-shadow: 2px 2px 16px rgb(0, 255, 255);  
+}
+
+.new {
+  font-size: 32px;
+  border: 2px rgb(8, 147, 112);
+  margin: 520px;
+  margin-top: 420px;
+  box-shadow: 2px 2px 16px rgb(0, 255, 255);
+}
+
+a {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 95px;
+  border-radius: 20px;
+  margin: 150px;
+}
+
+.icon {
+  color: rgb(0, 18, 60);  
+  text-shadow: 6px 6px 12px rgb(0, 96, 240);
+  border: 8px solid rgb(0, 18, 60);
+  box-shadow: 6px 6px 16px rgb(124, 124, 124);  
+  background-color: rgb(0, 48, 120);
+}
+
+
+.resetting {
+  color: rgb(60, 0, 0);
+  text-shadow: 6px 6px 12px rgb(240, 0, 0);
+  border: 8px solid rgb(60, 0, 0);
+  box-shadow: 6px 6px 16px rgb(124, 124, 124);
+  background-color: rgb(120, 0, 0);  
+}

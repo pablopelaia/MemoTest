@@ -21,7 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# mis archivos
-src/context/conceptos
-src/context/UserContext.jsx

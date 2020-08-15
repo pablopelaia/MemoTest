@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { GameContext } from '../../../context/GameContext'
+import { GameContext } from '../../context/GameContext'
 import './Styles.css'
 
 export const Start = () => {
@@ -10,10 +10,10 @@ export const Start = () => {
 
     return (
         <div>
-            <button onClick={handleClick}  className="Start">
+            <button onClick={handleClick}  className="click start">
                 Start
             </button> 
-            <h1 className="memo-inicio">MemoTest</h1>
+            <h1 className="title memo-test">MemoTest</h1>
         </div>
     )
 }
