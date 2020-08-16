@@ -3,60 +3,73 @@
     flex-wrap: wrap;
     width: 735px;
     height: 630px;
-    margin: 24px auto;
+    margin: 20px;
     justify-content: space-around;
 }
 
 .ficha {
     width: 106px;
     height: 106px;
-    margin: 10px;
+    margin: 8px;
+    cursor: pointer;
 }
 
 .frente {
     width: 90px;
     height: 90px;
-    display: flex;
-    text-shadow: 6px 6px 8px rgb(0, 64, 160);
-    box-shadow: 6px 6px 12px rgb(124, 124, 124);
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 32, 80);
-    border-radius: 20px;
-    border: 8px solid rgb(0, 12, 40);
     color: rgb(0, 12, 40);
-    cursor: pointer;
+    text-shadow: 6px 6px 8px rgb(0, 64, 160);
+    border: 10px solid rgb(0, 12, 40);
+    border-radius: 20px;
+    background-color: rgb(0, 32, 80);  
+    box-shadow: 6px 6px 12px rgb(124, 124, 124);
 }    
 
 .figura {
     width: 78px;
     height: 78px;
-    display: flex;
+    padding: 6px;
     color: rgb(0, 16, 40);
     text-shadow: 6px 6px 12px rgb(0, 8, 20);
-    box-shadow: 6px 6px 12px rgb(124, 124, 124);
-    padding: 6px;
-    justify-content: center;
-    align-items: center;    
-    background-color: rgb(180, 255, 255);
-    border: 8px solid rgb(48, 150, 210);
+    border: 10px solid rgb(48, 150, 210);
     border-radius: 20px;
-    cursor: pointer;
+    background-color: rgb(180, 255, 255);
+    box-shadow: 6px 6px 12px rgb(124, 124, 124);
 }
 
 .adivinada {
     width: 78px;
     height: 78px;
-    display: flex;
     padding: 6px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(100, 255, 200);
-    border: 8px solid rgb(0, 60, 24);
     color: rgb(0, 80, 32);
     text-shadow: 6px 6px 12px rgb(0, 20, 8);
-    box-shadow: 6px 6px 12px rgb(124, 124, 124);
-    opacity: 0.45;
+    border: 10px solid rgb(0, 60, 24);
     border-radius: 20px;
-    cursor: pointer;   
+    background-color: rgb(100, 255, 200);
+    box-shadow: 6px 6px 12px rgb(124, 124, 124);
+    opacity: 0.45;  
+}
+
+.player1 {
+    width: 78px;
+    height: 78px;
+    padding: 6px;
+    color: rgb(0, 80, 32);
+    text-shadow: 6px 6px 12px rgb(0, 20, 8);
+    border: 10px solid rgb(0, 60, 24);
+    border-radius: 20px;
+    background-color: rgb(80, 210, 160);
+    box-shadow: 6px 6px 12px rgb(124, 124, 124);  
+}
+
+.player2 {
+    width: 78px;
+    height: 78px;
+    padding: 6px;
+    color: rgb(255, 64, 0);
+    text-shadow: 6px 6px 12px rgb(120, 30, 0);
+    border: 10px solid rgb(240, 60, 0);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 180);
+    box-shadow: 6px 6px 12px rgb(124, 124, 124);  
 }
