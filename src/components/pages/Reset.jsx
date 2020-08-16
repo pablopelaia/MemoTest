@@ -13,12 +13,15 @@ export const Reset = () => {
     }
 
     return (
-        <Fragment>
-            <h1 className="subtitle refresh">
-                Reiniciando Juego <span className="wait"> .   .   .</span>
-            </h1>
+        <div className="main">
+            <div className="main-sub">
+                <h1 className="subtitle refresh">
+                    Reiniciando Juego <span className="wait"> .   .   .</span>
+                </h1>
+                <a className="resetting fa fa-trash fa-5x" onClick={handleClick()}/> 
+            </div>
             <h1 className="title reset">MemoTest</h1>
-            <a className="resetting fa fa-drupal fa-5x" onClick={handleClick()}/>                
-        </Fragment>
+                           
+        </div>
     )
 }

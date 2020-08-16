@@ -19,7 +19,7 @@ export const Tablero = () => {
     }
 
     return (
-        <div className="principal">
+        <div className="mesa">
             <div className="fichas">
                 <Fichero />
             </div>
@@ -28,9 +28,7 @@ export const Tablero = () => {
                 <h1 className="contador">
                     Intentos <span>{fichero.intentos}</span>
                 </h1>
-                <button className="reiniciar" onClick={handleClick}>
-                    Reiniciar
-                </button>
+                <button className="reiniciar fa fa-trash fa-3x" onClick={handleClick} />
                 <h1 className="memo-tablero">MemoTest</h1>
             </div>            
         </div>

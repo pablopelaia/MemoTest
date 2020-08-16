@@ -1,4 +1,4 @@
-.principal {
+.mesa {
   display: flex;
 }
 
@@ -67,14 +67,13 @@ span {
   outline: none;
   cursor: pointer;
   background: rgb(0, 18, 14);
-  font-size: 24px;
   font: bolder;
-  color: rgb(255, 255, 255);
-  opacity: 0.4;
-  border: 2px rgb(8, 147, 112);
-  box-shadow: 0px 0px 10px rgb(255, 20, 20);
-  padding: 5px;
-  border-radius: 10%;
-  margin: 160px;
-  margin-top: 130px;
+  color: rgb(240, 0, 0);
+  opacity: 0.5;
+  border: 2px rgb(120, 0, 0);
+  box-shadow: 0px 0px 8px rgb(255, 0, 0);
+  padding: 8px 12px;
+  border-radius: 50%;
+  margin: 180px;
+  margin-top: 115px;
 }

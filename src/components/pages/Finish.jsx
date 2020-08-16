@@ -9,9 +9,9 @@ export const Finish = () => {
     const handleClick = () => juegoFinalizado()
 
     return (
-        <Fragment>
-            <h1 className="win">
-                ¡¡¡ Feliciataciones Ganaste en <samp className="attempts">{fichero.intentos - 1}</samp> intentos !!!
+        <div className="main">
+            <h1 className="subtitle win">
+                ¡¡¡ Feliciataciones Ganaste en <samp className="attempts">33</samp> intentos !!!
             </h1>
             <h1 className="title end">
                 MemoTest
@@ -19,6 +19,8 @@ export const Finish = () => {
             <button onClick={handleClick}  className="click new">
                 Nuevo juego
             </button>            
-        </Fragment>
+        </div>
     )
 }
+
+// {fichero.intentos - 1}
