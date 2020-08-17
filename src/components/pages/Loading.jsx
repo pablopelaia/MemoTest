@@ -9,7 +9,7 @@ export const Loading = () => {
     const handleClick = () => {        
         setTimeout(() => {
             cargarPagina()
-        }, 1000);
+        }, 1500);
     }
 
     return (

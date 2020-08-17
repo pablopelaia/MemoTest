@@ -1,23 +1,17 @@
+.juego {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .mesa {
   display: flex;
 }
 
-.separador {
-  margin-left: 90px;
-  margin-right: 24px;
-  width: 10px;
-  height: 100%;
-  background-color: rgb(75, 76, 76);
-  box-shadow: 2px 2px 6px rgb(150, 151, 151);
-  border: 0px solid;
-  opacity: 0.5;
-}
-
 .fichas {
   position: relative;
-  margin-left: 24px;
-  margin-right: 224px;
-  top: -10px
+  margin-left: 50px;
+  margin-right: 210px;
 }
 
 .elementos {
@@ -25,41 +19,77 @@
   flex-direction: column;
 }
 
-.juego {
-  display: flex;
-  flex-direction: column;
+.fondo {
+  position: absolute;
+  font-size: 38px;
+  padding: 12px;
   text-align: center;
+  color: rgb(50, 55, 65);
+  text-shadow: 2px 2px 16px rgb(40, 44, 52);
+  border: solid 6px rgb(50, 55, 65);
+  box-shadow: 2px 2px 16px rgb(40, 44, 52);
+  background-color: rgb(30, 33, 39);
+  margin-left: 60px;
+  margin-top: 420px;
 }
 
 .contador {
   position: absolute;
-  font-size: 24px;
-  padding: 6px;
-  text-align: center;
-  color:rgb(255, 255, 255);
-  border: 2px rgb(8, 147, 112);
-  box-shadow: 2px 2px 12px rgb(0, 255, 255);
-  margin: 150px;
-  margin-top: 20px;
+  display: block;
+  align-items: center;
+  margin-left: 90px;
 }
 
-span {
-  color:rgb(0, 255, 255);
-  font-size: 32px;
-}
-
-.memo-tablero {
+.ply-verde {
   position: absolute;
-  writing-mode: vertical-rl;
-  margin: 150px;
-  margin-top: 14%;
-  font-size: 80px;
-  padding: 12px;
-  text-align: center;
-  color:rgb(8, 147, 112);
-  border: solid 6px rgb(8, 147, 112);
-  box-shadow: 2px 2px 6px rgb(4, 72, 56);
-  text-shadow: 2px 2px 6px rgb(4, 72, 56);
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  margin-top: 160px;
+}
+
+.ply-naranja {
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  margin-top: 280px;
+}
+
+.avatar {
+  width: 95px;
+  height: 95px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 44, 52);
+  padding: 0x;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 50px;
+  outline: none;
+}
+
+.verde {  
+  text-shadow: 2px 2px 16px rgb(0, 160, 64);
+  border: 2px rgb(8, 147, 112);
+  box-shadow: 2px 2px 16px rgb(0, 160, 64);
+}
+
+.naranja {
+  text-shadow: 2px 2px 8px rgb(220, 90, 0);
+  border: 2px rgb(147, 112, 8);
+  box-shadow: 2px 2px 16px rgb(220, 90, 0);
+}
+  
+h4 {
+  width: fit-content;
+  height: fit-content;
+  color:rgb(255, 255, 255);
+  font-size: 48px;
+  box-shadow: 2px 2px 12px rgb(125, 125, 125);
+  border: 0px;
+  border-radius: 20%;
+  padding: 6px;
+  margin: 16px;
 }
 
 .reiniciar {
@@ -69,11 +99,42 @@ span {
   background: rgb(0, 18, 14);
   font: bolder;
   color: rgb(240, 0, 0);
-  opacity: 0.5;
   border: 2px rgb(120, 0, 0);
   box-shadow: 0px 0px 8px rgb(255, 0, 0);
   padding: 8px 12px;
   border-radius: 50%;
-  margin: 180px;
-  margin-top: 115px;
+  opacity: 0.45;
+  margin: 145px;
+  margin-top: 520px;
+}
+
+.turno {
+  position: absolute;
+  font-size: 32px;
+  padding: 4px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin-left: 100px;
+  margin-top: 40px;
+}
+
+#T {
+  width: fit-content;
+  height: fit-content;
+  color:rgb(0, 88, 104);
+  font-size: 36px;
+}
+
+.green {
+  color: rgb(0, 80, 32);
+    text-shadow: 2px 2px 16px rgb(0, 20, 8);
+    border: 6px solid rgb(0, 60, 24);
+    box-shadow: 2px 2px 16px rgb(124, 124, 124);
+}
+
+.orange {
+  color: rgb(255, 64, 0);
+    text-shadow: 2px 2px 16px rgb(120, 30, 0);
+    border: 6px solid rgb(240, 60, 0);
+    box-shadow: 2px 2px 16px rgb(124, 124, 124);
 }

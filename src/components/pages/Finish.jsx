@@ -4,15 +4,22 @@ import './Finish.css'
 
 export const Finish = () => {
     
-    let { fichero, juegoFinalizado } = useContext(GameContext)
+    let { juego, juegoFinalizado } = useContext(GameContext)
     
     const handleClick = () => juegoFinalizado()
+    const ganador = () => {
+        if(juego.ganador === 1){
+            return "gana-verde"
+        }
+        return "gana-naranja"
+    }
 
     return (
         <div className="main-f">
             <h1 className="subtitle-f win">
-                ¡¡¡ Feliciataciones Ganaste en <samp className="attempts">{fichero.intentos - 1}</samp> intentos !!!
+                ¡¡¡ Feliciataciones Ganaste !!!
             </h1>
+            <button className={`drupal ${ganador()} fa fa-drupal fa-5x`} />
             <h1 className="end">
                 MemoTest
             </h1>

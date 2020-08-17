@@ -4,24 +4,25 @@ import './Start.css'
 
 export const Start = () => {
     
-    const { armaJuego } = useContext(GameContext)
+    const { iniciaJuego } = useContext(GameContext)
     
-    const handleClick = () => armaJuego()
+    const handleClickUno = () => iniciaJuego(1)
+    const handleClickDos = () => iniciaJuego(2)
 
     return (
         <div className="main-start">
-                <div className="cantidad" id="uno"  onClick={handleClick}>
+                <div className="cantidad" id="uno" value={1} onClick={handleClickUno}>
                     <button className="play one fa fa-drupal fa-5x" />
                     <button className="play btn start">
                         1 Jugador
                     </button>
                 </div>
-                <div className="cantidad" id="dos">
+                <div className="cantidad" id="dos" value={2} onClick={handleClickDos}>
                     <button className="play two">
                         <i className="a fa fa-drupal fa-4x" />
                         <i className="b fa fa-drupal fa-4x" />
                     </button>
-                    <button className="play btn start" onClick={handleClick}>
+                    <button className="play btn start">
                         2 Jugadores
                     </button>
                 </div>

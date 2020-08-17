@@ -60,3 +60,27 @@
     margin-top: 34%;
     box-shadow: 2px 2px 16px rgb(0, 255, 255);
 }
+
+.drupal {
+    width: 120px;
+    height: 120px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(40, 44, 52);
+    border: 2px;
+    padding: 0x;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 60px;
+    outline: none;
+    margin-top: 16%;
+  }
+  
+  .gana-verde {  
+    text-shadow: 2px 2px 24px rgb(0, 160, 64);
+    box-shadow: 2px 2px 24px rgb(0, 160, 64);
+  }
+  
+  .gana-naranja {
+    text-shadow: 2px 2px 24px rgb(220, 90, 0);
+    box-shadow: 2px 2px 24px rgb(220, 90, 0);
+  }

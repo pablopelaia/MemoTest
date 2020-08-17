@@ -9,7 +9,39 @@ let { Provider, Consumer } = GameContext
 function GameProvider({ children }) {
     
     let [fichero, setFichero] = useState({})
-   
+    let [juego, setJuego] = useState({})
+
+    function iniciaJuego(click) {
+        const losParticipantes = seleccionaModo(click)
+        const elModo = losParticipantes.length
+        
+        juego = {
+            modo: elModo,
+            turno: 1,
+            jugadores: losParticipantes,
+            ganador: losParticipantes[0].id
+        }
+        setJuego(juego)
+        armaJuego()
+    }
+
+    function seleccionaModo(click) {
+        let participantes =[]
+        const verde = {
+            id: 1,
+            puntos: 0,
+        }
+        participantes.push(verde)
+        if(click === 2) {
+            const naranja = {
+                id: 2,
+            puntos: 0,
+            }
+            participantes.push(naranja)
+        }
+        return participantes
+    }
+       
     function armaJuego() {
         const misFichas= armaFichero()
         fichero = {
@@ -131,7 +163,8 @@ function GameProvider({ children }) {
     function reiniciaJuego() {
         const resetFichero = {
             ...fichero,
-            memoTest:"Reset"
+            memoTest:"Reset",
+            cargar:"Start"
         }
         setFichero(resetFichero)
     }
@@ -154,7 +187,7 @@ function GameProvider({ children }) {
     }
 
     return (
-        <Provider value={{fichero, armaJuego, reiniciaJuego, juegoFinalizado, cargarPagina, hacerClick}}>
+        <Provider value={{juego, fichero, iniciaJuego, reiniciaJuego, juegoFinalizado, cargarPagina, hacerClick}}>
             {children}
         </Provider>
     )
