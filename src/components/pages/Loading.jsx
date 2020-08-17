@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import React, { useContext } from 'react'
 import './LoadingReset.css'
 import { GameContext } from '../../context/GameContext'
 
@@ -6,7 +6,7 @@ export const Loading = () => {
     
     let { cargarPagina } = useContext(GameContext)
     
-    const handleClick = () => {        
+    const handleClick = () => {
         setTimeout(() => {
             cargarPagina()
         }, 1500);

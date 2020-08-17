@@ -54,11 +54,11 @@
     width: 78px;
     height: 78px;
     padding: 6px;
-    color: rgb(0, 80, 32);
-    text-shadow: 6px 6px 12px rgb(0, 20, 8);
-    border: 10px solid rgb(0, 60, 24);
+    color: rgb(0, 16, 40);
+    text-shadow: 6px 6px 12px rgb(80, 210, 160);
+    border: 10px solid rgb(0, 16, 40);
     border-radius: 20px;
-    background-color: rgb(80, 210, 160);
+    background-color: rgb(40, 115, 84);
     box-shadow: 6px 6px 12px rgb(124, 124, 124);  
 }
 
@@ -66,10 +66,10 @@
     width: 78px;
     height: 78px;
     padding: 6px;
-    color: rgb(255, 64, 0);
-    text-shadow: 6px 6px 12px rgb(120, 30, 0);
-    border: 10px solid rgb(240, 60, 0);
+    color: rgb(0, 16, 40);
+    text-shadow: 6px 6px 12px rgb(255, 255, 180);
+    border: 10px solid rgb(0, 16, 40);
     border-radius: 20px;
-    background-color: rgb(255, 255, 180);
+    background-color: rgb(188, 143, 90);
     box-shadow: 6px 6px 12px rgb(124, 124, 124);  
 }

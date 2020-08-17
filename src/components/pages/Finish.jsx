@@ -8,7 +8,7 @@ export const Finish = () => {
     
     const handleClick = () => juegoFinalizado()
     const ganador = () => {
-        if(juego.ganador === 1){
+        if(juego.ganador === "V"){
             return "gana-verde"
         }
         return "gana-naranja"

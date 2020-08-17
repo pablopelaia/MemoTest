@@ -11,37 +11,15 @@ function GameProvider({ children }) {
     let [fichero, setFichero] = useState({})
     let [juego, setJuego] = useState({})
 
-    function iniciaJuego(click) {
-        const losParticipantes = seleccionaModo(click)
-        const elModo = losParticipantes.length
-        
+    function iniciaJuego(click) {   
         juego = {
-            modo: elModo,
-            turno: 1,
-            jugadores: losParticipantes,
-            ganador: losParticipantes[0].id
+            modo: click,
+            ganador: ""
         }
         setJuego(juego)
         armaJuego()
     }
-
-    function seleccionaModo(click) {
-        let participantes =[]
-        const verde = {
-            id: 1,
-            puntos: 0,
-        }
-        participantes.push(verde)
-        if(click === 2) {
-            const naranja = {
-                id: 2,
-            puntos: 0,
-            }
-            participantes.push(naranja)
-        }
-        return participantes
-    }
-       
+    
     function armaJuego() {
         const misFichas= armaFichero()
         fichero = {
@@ -49,8 +27,10 @@ function GameProvider({ children }) {
             cargar:"Play",
             fichas: misFichas,
             fichasSeleccionadas: [],
-            intentos: 0,
-            estaVerificando: false
+            puntaje: [0,0],
+            leTocaJugar: "V",
+            turno: 1,
+            estaVerificando: false,
         }
         setFichero(fichero)
     }
@@ -69,7 +49,8 @@ function GameProvider({ children }) {
                 id: number,
                 figura: MIS_FIGURAS.splice(i, 1)[0],
                 fueAdivinada: false,
-                estaCliqueda: false
+                estaCliqueda: false,
+                esColor: ""
             }
             fichas.push(ficha)
             fichas.push({...ficha, id: number+1})
@@ -77,7 +58,6 @@ function GameProvider({ children }) {
         }
         return mezclar(fichas)
     }
-
 
     function hacerClick(fichaID) {
         
@@ -119,45 +99,103 @@ function GameProvider({ children }) {
         setTimeout(() => {            
             
             const [fichaUno, fichaDos] = actualFichero.fichasSeleccionadas
-                
+            const acierta = fichaUno.figura === fichaDos.figura
+            
             let actualesFichas = actualFichero.fichas.map(f => {
 
                 if (f.figura === fichaUno.figura || f.figura === fichaDos.figura){
-                    if (fichaUno.figura === fichaDos.figura){
-                        return {...f, fueAdivinada: true}
+                    if (acierta){
+                        return {...f, fueAdivinada: true, esColor: fichero.leTocaJugar}
                     }
                     return {...f, estaCliqueda: false}
                 }
                 return f
             })
             
+            let actualTurno = actualFichero.turno
+            let actualJugador = actualFichero.leTocaJugar
+            let actualPuntaje = actualFichero.puntaje
+
+            if(acierta){
+                let Verde = actualFichero.puntaje[0]
+                let Naranja = actualFichero.puntaje[1]
+                
+                switch(actualFichero.leTocaJugar) {
+                    case "V":
+                        Verde = Verde + 1
+                        break
+                    case "N":
+                        Naranja = Naranja + 1
+                }
+                actualPuntaje = [Verde, Naranja]
+
+            }else{
+                actualTurno = actualTurno + 1
+
+                if(fichero.leTocaJugar === "V" && juego.modo === 2) {
+                    actualJugador = "N"
+                }else{
+                    actualJugador = "V"
+                }
+            }
+
             let nuevoFichero= {
                 ...actualFichero,
                 fichas: actualesFichas,
                 fichasSeleccionadas: [],
-                intentos: actualFichero.intentos + 1,
-                estaVerificando: false
+                puntaje: actualPuntaje,
+                leTocaJugar: actualJugador,
+                turno: actualTurno,
+                estaVerificando: acierta,
             }
             
             setFichero(nuevoFichero)
 
-            if (fichaUno.figura === fichaDos.figura){
+            if (acierta){
                 verificaFinaDelJuego(nuevoFichero);
             }
-
         }, 1500)
     }
 
     const verificaFinaDelJuego = (nuevoFichero) => {
+
         if (nuevoFichero.fichas.filter(f => !f.fueAdivinada).length === 0) {
+            
+            const elGanador = () => {
+                let Verde = nuevoFichero.puntaje[0]
+                let Naranja = nuevoFichero.puntaje[1]
+                
+                if(Verde > Naranja) {
+                    return "V"
+                }
+
+                if(Verde === Naranja) {
+                    if(nuevoFichero.leTocaJugar === "N") {
+                        return "V"
+                    }
+                }
+                return "N"
+            }
+            
             setTimeout(() => {
-                let ficheroFinal= {
+                const ficheroFinal= {
                     ...nuevoFichero,
                     memoTest:"Finish"
                 }
+
+                const nuevoJuego = {
+                    ...juego,
+                    ganador: elGanador()
+                }                
                 setFichero(ficheroFinal)
-            }, 2500);
+                setJuego(nuevoJuego)
+            }, 2000);
         }
+        nuevoFichero = {
+            ...nuevoFichero,
+            estaVerificando: false
+        }
+        setFichero(nuevoFichero)
     }
 
     function reiniciaJuego() {

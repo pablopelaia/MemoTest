@@ -5,11 +5,21 @@ import Flip from 'react-card-flip'
 
 export const Ficha = ({ ficha }) => {
       
-    const { hacerClick } = useContext(GameContext)
+    const { fichero, hacerClick } = useContext(GameContext)
     const { id, figura, fueAdivinada, estaCliqueda } = ficha
     
     const handleClick = () => {
         hacerClick(id)
+    }
+
+    const fichaFlipped = () => {
+        if(fueAdivinada){
+            if(ficha.esColor === "V"){
+                return `player1 fa ${figura} fa-4x`
+            }
+            return `player2 fa ${figura} fa-4x`
+        }
+        return `figura fa ${figura} fa-4x`
     }
     
     return(
@@ -23,7 +33,7 @@ export const Ficha = ({ ficha }) => {
                 </div>
                 <div>
                     <i
-                    className={`${fueAdivinada ? 'adivinada' : 'figura'} fa ${figura} fa-4x`}
+                    className={fichaFlipped()}
                     />
                 </div>
             </Flip>
