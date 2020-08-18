@@ -1,25 +1,19 @@
 import React, { useContext } from 'react'
-import { GameContext } from '../../context/GameContext'
-import './Finish.css'
+import { GameContext } from '../../../context/GameContext'
+import './Styles.css'
 
 export const Finish = () => {
     
-    let { juego, juegoFinalizado } = useContext(GameContext)
+    let { juegoFinalizado, Ganador } = useContext(GameContext)
     
     const handleClick = () => juegoFinalizado()
-    const ganador = () => {
-        if(juego.ganador === "V"){
-            return "gana-verde"
-        }
-        return "gana-naranja"
-    }
 
     return (
         <div className="main-f">
             <h1 className="subtitle-f win">
                 ¡¡¡ Feliciataciones Ganaste !!!
             </h1>
-            <button className={`drupal ${ganador()} fa fa-drupal fa-5x`} />
+            <button className={`drupal ${Ganador()} fa fa-drupal fa-5x`} />
             <h1 className="end">
                 MemoTest
             </h1>
@@ -29,5 +23,3 @@ export const Finish = () => {
         </div>
     )
 }
-
-// 

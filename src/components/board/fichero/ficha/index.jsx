@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import { GameContext } from '../../context/GameContext'
-import './Ficha.css'
+import { GameContext } from '../../../../context/GameContext'
+import './Styles.css'
 import Flip from 'react-card-flip'
 
 export const Ficha = ({ ficha }) => {
       
-    const { fichero, hacerClick } = useContext(GameContext)
+    const { hacerClick } = useContext(GameContext)
     const { id, figura, fueAdivinada, estaCliqueda } = ficha
     
     const handleClick = () => {

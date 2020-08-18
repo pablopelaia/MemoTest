@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { GameContext } from '../../context/GameContext'
-import './Start.css'
+import { GameContext } from '../../../context/GameContext'
+import './Styles.css'
 
 export const Start = () => {
     

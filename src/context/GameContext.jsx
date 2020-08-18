@@ -8,13 +8,13 @@ let { Provider, Consumer } = GameContext
 
 function GameProvider({ children }) {
     
-    let [fichero, setFichero] = useState({})
     let [juego, setJuego] = useState({})
+    let [fichero, setFichero] = useState({})
 
     function iniciaJuego(click) {   
         juego = {
-            modo: click,
-            ganador: ""
+            ganador: "",
+            modo: click            
         }
         setJuego(juego)
         armaJuego()
@@ -34,7 +34,6 @@ function GameProvider({ children }) {
         }
         setFichero(fichero)
     }
-
 
     function armaFichero(){
 
@@ -198,6 +197,22 @@ function GameProvider({ children }) {
         setFichero(nuevoFichero)
     }
 
+    function Ganador(){
+        
+        if(juego.ganador === "V") {
+            return "gana-verde"
+        }
+        return "gana-naranja"
+    }
+
+    function TurnoColor() {
+
+        if(fichero.leTocaJugar === "N"){
+            return "orange"
+        }
+        return "green"
+    }
+
     function reiniciaJuego() {
         const resetFichero = {
             ...fichero,
@@ -225,7 +240,17 @@ function GameProvider({ children }) {
     }
 
     return (
-        <Provider value={{juego, fichero, iniciaJuego, reiniciaJuego, juegoFinalizado, cargarPagina, hacerClick}}>
+        <Provider value={{
+            juego,
+            fichero,
+            iniciaJuego,
+            reiniciaJuego,
+            juegoFinalizado,
+            cargarPagina,
+            hacerClick,
+            Ganador,
+            TurnoColor
+            }}>
             {children}
         </Provider>
     )

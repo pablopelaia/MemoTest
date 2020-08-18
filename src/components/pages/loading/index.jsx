@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import './LoadingReset.css'
-import { GameContext } from '../../context/GameContext'
+import './Styles.css'
+import { GameContext } from '../../../context/GameContext'
 
 export const Loading = () => {
     
