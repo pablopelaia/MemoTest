@@ -1,5 +1,6 @@
 import React, { Fragment, useContext } from 'react'
 import { GameContext } from '../../context/GameContext'
+
 export default function ElementsConteiner() {
 
     const { fichero, reiniciaJuego, TurnoColor } = useContext(GameContext)
