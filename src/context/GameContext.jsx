@@ -10,21 +10,12 @@ function GameProvider({ children }) {
     
     let [juego, setJuego] = useState({})
     let [fichero, setFichero] = useState({})
-
-    function iniciaJuego(click) {   
-        juego = {
-            ganador: "",
-            modo: click            
-        }
-        setJuego(juego)
-        armaJuego()
-    }
     
     function armaJuego() {
         const misFichas= armaFichero()
         fichero = {
-            memoTest:"Loading",
-            cargar:"Play",
+            memoTest:"Start",
+            cargar:"",
             fichas: misFichas,
             fichasSeleccionadas: [],
             puntaje: [0,0],
@@ -56,6 +47,21 @@ function GameProvider({ children }) {
             number= number+2
         }
         return mezclar(fichas)
+    }
+
+    function iniciaJuego(click) { 
+        juego = {
+            ganador: "",
+            modo: click            
+        }
+        setJuego(juego)
+        
+        const nuevoFichero = {
+            ...fichero,
+            memoTest:"Loading",
+            cargar:"Play",
+        }
+        setFichero(nuevoFichero)
     }
 
     function hacerClick(fichaID) {
@@ -243,6 +249,7 @@ function GameProvider({ children }) {
         <Provider value={{
             juego,
             fichero,
+            armaJuego,
             iniciaJuego,
             reiniciaJuego,
             juegoFinalizado,

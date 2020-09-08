@@ -5,6 +5,7 @@ import { Board } from '../board/index'
 import { Finish } from './finish'
 import { Loading } from './loading'
 import { Reset } from './reset'
+import { Caratula } from '../caratula'
 
 export const ElJuego = () => {
 
@@ -27,6 +28,6 @@ export const ElJuego = () => {
             return <Reset />
         
         default:
-            return <Start />
+            return <Caratula />
     }
 }
