@@ -7,7 +7,7 @@ import { ElJuego } from './components/pages'
 export default function App() {
   
   return (
-    <div className="App">
+    <div className="conteiner">
       <GameProvider>
         <ElJuego />
       </GameProvider>
