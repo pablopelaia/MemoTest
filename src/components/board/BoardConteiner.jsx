@@ -2,7 +2,7 @@ import React from 'react'
 import AvatarConteiner from './AvatarConteiner'
 import ElementsConteiner from './ElementsConteiner'
 
-export default function BoardConteiner() {
+export function BoardConteiner() {
 
     return (
         <div className="elementos">

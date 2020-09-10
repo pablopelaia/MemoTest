@@ -1,7 +1,7 @@
 import React from 'react'
 import './Styles.css'
 import { Fichero } from './fichero'
-import BoardConteiner from './BoardConteiner'
+import { BoardConteiner } from './BoardConteiner'
 
 export const Board = () => {
 

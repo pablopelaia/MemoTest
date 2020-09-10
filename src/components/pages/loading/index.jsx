@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import './Styles.css'
 import { GameContext } from '../../../context/GameContext'
 
 export const Loading = () => {
@@ -13,11 +12,13 @@ export const Loading = () => {
     }
 
     return (
-        <div className="main-l-r" onClick={handleClick()}>
-            <h1 className="subtitle-l-r loading">
-                L O A D I N G <span className="updating"> .   .   .</span>
+        <div className="conteiner caratula row col-12 justify-content-center" onClick={handleClick()}>
+            <h1 className="logo-memo cargar">
+                MemoTest
             </h1>
-            <h1 className="title-l-r load">MemoTest</h1>              
+            <h1 className="loading">
+                L O A D I N G <strong> .   .   .</strong>
+            </h1>
         </div>
     )
 }

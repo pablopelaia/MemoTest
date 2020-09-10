@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import './Styles.css'
 import { GameContext } from '../../../context/GameContext'
 
 export const Reset = () => {
@@ -13,14 +12,13 @@ export const Reset = () => {
     }
 
     return (
-        <div className="main-l-r">
-            <div className="main-sub">
-                <a className="resetting fa fa-trash fa-5x" onClick={handleClick()}/> 
-                <h1 className="subtitle-l-r refresh">
-                    Reiniciando Juego <span className="wait"> .   .   .</span>
-                </h1>
-            </div>
-            <h1 className="title-l-r reset">MemoTest</h1>
+        <div className="conteiner caratula row col-12 justify-content-center" onClick={handleClick()}>
+            <h1 className="logo-memo cargar">
+                MemoTest
+            </h1>
+            <h1 className="loading refresh">
+                Reiniciando Juego <strong> .   .   .</strong>
+            </h1>
         </div>
     )
 }

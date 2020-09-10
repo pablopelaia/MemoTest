@@ -1,10 +1,12 @@
 body {
-  background-color: hsl(220, 13%, 18%);
+  background-color: rgb(40, 44, 52);
 }
 
 div:focus {
   outline: none !important;
 }
+
+/* LOGO GENERAL */
 
 .logo-memo {
   position: absolute;
@@ -19,4 +21,32 @@ div:focus {
 
 .caratula {
   margin-top: 120px;
+}
+
+/* LOADING Y RESET */
+
+.cargar {
+  color:rgb(44, 50, 58);
+  padding: 16px;
+  text-shadow: 2px 2px 6px rgb(80, 88, 104);
+  border: solid 6px rgb(44, 50, 58);
+  box-shadow: 2px 2px 32px rgb(80, 88, 104);
+}
+
+.loading {
+  padding: 2px;
+  margin-top: 240px;
+  position: relative;
+  font-size: 75px;
+  color:rgb(40, 44, 52);
+  text-shadow: 6px 6px 16px rgb(2, 36, 28);
+  border: 2px rgb(8, 147, 112);
+  text-shadow: 6px 6px 16px rgb(0, 255, 255);
+}
+
+.refresh {
+  color: rgb(210, 60, 60);
+  border: 4px rgb(255, 0, 0);
+  text-shadow: 6px 6px 16px rgb(255, 0, 0);
+  opacity: 0.4;
 }
