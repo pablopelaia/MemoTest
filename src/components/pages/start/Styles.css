@@ -1,8 +1,13 @@
+.iconos {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+}
+
 .cantidad {
-    justify-content: space-around;
     align-items: center;
     display: flex;
-    margin-top: 270px;
+    margin-left: 56px;
 }
 
 .start {

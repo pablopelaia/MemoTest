@@ -3,20 +3,21 @@ import { GameContext } from '../../../context/GameContext'
 
 export const Reset = () => {
     
-    let { cargarPagina } = useContext(GameContext)
+    let { cargarPagina, armaJuego } = useContext(GameContext)
     
     const handleClick = () => {        
         setTimeout(() => {
+            armaJuego()
             cargarPagina()
-        }, 2000); 
+        }, 2000);
     }
 
     return (
-        <div className="conteiner caratula row col-12 justify-content-center" onClick={handleClick()}>
-            <h1 className="logo-memo cargar">
+        <div className="caratula" onClick={handleClick()}>
+            <h1 className="logo cargar">
                 MemoTest
             </h1>
-            <h1 className="loading refresh">
+            <h1 className="bajada refresh">
                 Reiniciando Juego <strong> .   .   .</strong>
             </h1>
         </div>

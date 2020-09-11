@@ -12,11 +12,11 @@ export const Loading = () => {
     }
 
     return (
-        <div className="conteiner caratula row col-12 justify-content-center" onClick={handleClick()}>
-            <h1 className="logo-memo cargar">
+        <div className="caratula" onClick={handleClick()}>
+            <h1 className="logo cargar">
                 MemoTest
             </h1>
-            <h1 className="loading">
+            <h1 className="bajada">
                 L O A D I N G <strong> .   .   .</strong>
             </h1>
         </div>

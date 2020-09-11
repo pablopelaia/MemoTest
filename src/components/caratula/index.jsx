@@ -6,9 +6,12 @@ export const Caratula = () => {
     const { armaJuego } = useContext(GameContext)
     
     return (
-        <div className="conteiner caratula row col-12 justify-content-center">
-            <h1 className="logo-memo" onClick={armaJuego}>
+        <div className="caratula">
+            <h1 className="logo">
                 MemoTest
+            </h1>
+            <h1 className="bajada jugar" onClick={armaJuego}>
+                J U G A R
             </h1>
         </div>
     )

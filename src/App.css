@@ -2,46 +2,45 @@ body {
   background-color: rgb(40, 44, 52);
 }
 
-div:focus {
-  outline: none !important;
+/* caratulas */
+
+.caratula {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
 }
 
-/* LOGO GENERAL */
-
-.logo-memo {
-  position: absolute;
+.logo {
   font-size: 120px;
   color:rgb(8, 147, 112);
   padding: 16px;
   text-shadow: 2px 2px 6px rgb(4, 72, 56);
   border: solid 6px rgb(8, 147, 112);
-  box-shadow: 2px 2px 6px rgb(4, 72, 56);  
-  cursor: pointer;
+  box-shadow: 2px 2px 6px rgb(4, 72, 56);
 }
 
-.caratula {
-  margin-top: 120px;
+.bajada {
+  padding: 2px;
+  font-size: 75px;
+  color:rgb(40, 44, 52);
+  text-shadow: 6px 6px 16px rgb(2, 36, 28);
+  border: 2px rgb(8, 147, 112);
+  text-shadow: 6px 6px 16px rgb(0, 255, 255);
+  margin-top: -40PX;
+}
+
+.jugar {
+  margin-left: 140px;
+  cursor: pointer;
 }
 
 /* LOADING Y RESET */
 
 .cargar {
   color:rgb(44, 50, 58);
-  padding: 16px;
   text-shadow: 2px 2px 6px rgb(80, 88, 104);
   border: solid 6px rgb(44, 50, 58);
   box-shadow: 2px 2px 32px rgb(80, 88, 104);
-}
-
-.loading {
-  padding: 2px;
-  margin-top: 240px;
-  position: relative;
-  font-size: 75px;
-  color:rgb(40, 44, 52);
-  text-shadow: 6px 6px 16px rgb(2, 36, 28);
-  border: 2px rgb(8, 147, 112);
-  text-shadow: 6px 6px 16px rgb(0, 255, 255);
 }
 
 .refresh {
