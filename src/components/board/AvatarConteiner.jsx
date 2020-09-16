@@ -11,7 +11,7 @@ export default function AvatarConteiner() {
             const puntosNaranja =  fichero.puntaje[1]
             return (
                 <div className="ply-naranja">
-                    <button className="avatar naranja fa fa-drupal fa-4x" />
+                    <button className="avatar naranja fa fa-user fa-4x" />
                     <h4 id="p2">{puntosNaranja}</h4>
                 </div>
             )
@@ -21,7 +21,7 @@ export default function AvatarConteiner() {
     return (
         <div className="contador">
             <div className="ply-verde">
-                    <button className="avatar verde fa fa-drupal fa-4x" />
+                    <button className="avatar verde fa fa-user fa-4x" />
                     <h4 id="p1">{puntosVerde}</h4>
             </div>
             {renderNaranja()}

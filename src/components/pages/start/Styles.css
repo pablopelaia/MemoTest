@@ -37,11 +37,11 @@
 }
   
 .one {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 40, 16);;
     text-shadow: 2px 2px 16px rgb(0, 255, 255);
     background-color: rgb(40, 44, 52);
     border: 2px rgb(8, 147, 112);
-    box-shadow: 2px 2px 16px rgb(0, 255, 255);
+    text-shadow: 2px 2px 8px rgb(255, 255, 255);
     outline: none;
 }
   
@@ -49,14 +49,18 @@
     color: rgb(255, 255, 255);  
     background-color: rgb(40, 44, 52);
     border: 2px rgb(8, 147, 112);
-    box-shadow: 2px 2px 16px rgb(0, 255, 255);
+    text-shadow: 2px 2px 8px rgb(255, 255, 255);
     outline: none;
  }
   
 .a {
-    text-shadow: 2px 2px 8px rgb(0, 160, 64);
+    text-shadow: 2px 2px 8px rgb(255, 255, 255);
+    color: rgb(0, 40, 16);;
+    margin-right: 8px;
 }
   
 .b {
-    text-shadow: 2px 2px 8px rgb(220, 90, 0);
+    text-shadow: 2px 2px 8px rgb(255, 255, 255);
+    color: rgb(220, 90, 0);
+    margin-right: 8px;
 }

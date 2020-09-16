@@ -13,7 +13,7 @@ export const Finish = () => {
             <h1 className="subtitle-f win">
                 ¡¡¡ Feliciataciones Ganaste !!!
             </h1>
-            <button className={`drupal ${Ganador()} fa fa-drupal fa-5x`} />
+            <button className={`drupal ${Ganador()} fa fa-user fa-5x`} />
             <h1 className="end">
                 MemoTest
             </h1>
