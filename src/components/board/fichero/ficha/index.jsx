@@ -26,10 +26,11 @@ export const Ficha = ({ ficha }) => {
         <div className="ficha">
             <Flip isFlipped={estaCliqueda} flipDirection="horizontal">
                 <div>
-                    <i
-                    className={'frente fa fa-drupal fa-5x'}
-                    onClick={handleClick}
-                    />
+                    <i className={'frente'} onClick={handleClick}>
+                        <h1 className="logo-ficha">
+                            MemoTest
+                        </h1>
+                    </i>
                 </div>
                 <div>
                     <i
@@ -40,3 +41,5 @@ export const Ficha = ({ ficha }) => {
         </div>
     )
 }
+
+// fa fa-drupal fa-5x

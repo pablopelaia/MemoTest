@@ -18,7 +18,7 @@ export const Reset = () => {
                 MemoTest
             </h1>
             <h1 className="bajada refresh">
-                Reiniciando Juego <strong> .   .   .</strong>
+                Restarting <strong> .   .   .</strong>
             </h1>
         </div>
     )

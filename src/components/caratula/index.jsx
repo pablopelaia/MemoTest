@@ -11,7 +11,7 @@ export const Caratula = () => {
                 MemoTest
             </h1>
             <h1 className="bajada jugar" onClick={armaJuego}>
-                J U G A R
+                S T A R T
             </h1>
         </div>
     )

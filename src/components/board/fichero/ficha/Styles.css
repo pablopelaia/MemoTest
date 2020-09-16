@@ -15,23 +15,30 @@
 }
 
 .frente {
-    width: 90px;
-    height: 90px;
-    color: rgb(0, 12, 40);
-    text-shadow: 6px 6px 8px rgb(0, 64, 160);
-    border: 10px solid rgb(0, 12, 40);
+    width: 98px;
+    height: 98px;
+    border: 8px solid rgb(0, 12, 40);
     border-radius: 20px;
     background-color: rgb(0, 32, 80);  
     box-shadow: 6px 6px 12px rgb(124, 124, 124);
-}    
+}
+
+.logo-ficha {
+    font-size: 18px;
+    font-style: normal;
+    text-shadow: none;
+    /* border: 3px solid rgb(0, 12, 40); */
+    padding: 1px;
+    color: rgb(0, 12, 40);
+  }
 
 .figura {
-    width: 78px;
-    height: 78px;
+    width: 86px;
+    height: 86px;
     padding: 6px;
     color: rgb(0, 16, 40);
     text-shadow: 6px 6px 12px rgb(0, 8, 20);
-    border: 10px solid rgb(48, 150, 210);
+    border: 8px solid rgb(48, 150, 210);
     border-radius: 20px;
     background-color: rgb(180, 255, 255);
     box-shadow: 6px 6px 12px rgb(124, 124, 124);
